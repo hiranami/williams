@@ -6,10 +6,7 @@ import org.springframework.web.bind.annotation.PathVariable
 import org.springframework.web.bind.annotation.RestController
 
 @RestController
-class RateController(private val rateRepositoy: RateRepositoy) {
+class RateController(private val rateService: RateService) {
     @GetMapping("/rate")
-    suspend fun getList() = rateRepositoy.findAll()
-
-    @GetMapping("/rate/{id}")
-    suspend fun getById(@PathVariable id: Int) = rateRepositoy.findById(id)
+    suspend fun getList() = rateService.findAll()
 }

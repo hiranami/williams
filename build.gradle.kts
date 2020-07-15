@@ -39,8 +39,10 @@ dependencies {
 	annotationProcessor("org.springframework.boot:spring-boot-configuration-processor")
 	testImplementation("org.springframework.boot:spring-boot-starter-test") {
 		exclude(group = "org.junit.vintage", module = "junit-vintage-engine")
+		exclude(group = "org.mockito", module = "mockito-junit-jupiter")
 	}
 	testImplementation("io.projectreactor:reactor-test")
+	testImplementation("com.ninja-squad:springmockk:2.0.2")
 }
 
 tasks.withType<Test> {
