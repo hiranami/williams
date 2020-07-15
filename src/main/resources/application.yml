@@ -1,0 +1,7 @@
+spring:
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/225_future_db?useSSL=false&serverTimezone=GMT
+    username: ${MYSQL_USER}
+    password: ${MYSQL_PASS}
+server:
+  port: 8090
